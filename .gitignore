@@ -1,0 +1,13 @@
+# System
+.DS_Store
+
+# Temporary Files
+/tmp/
+
+# Secrets
+.env.local
+.env.*.local
+
+# npm
+/node_modules/
+tsconfig.tsbuildinfo

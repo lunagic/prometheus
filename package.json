@@ -1,0 +1,37 @@
+{
+	"description": "UI Library",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@chromatic-com/storybook": "^3.2.6",
+		"@storybook/addon-essentials": "^8.6.12",
+		"@storybook/blocks": "^8.6.12",
+		"@storybook/experimental-addon-test": "^8.6.12",
+		"@storybook/preact": "^8.6.12",
+		"@storybook/preact-vite": "^8.6.12",
+		"@storybook/test": "^8.6.12",
+		"storybook": "^8.6.12"
+	},
+	"exports": {
+		".": "./src/index.tsx",
+		"./styles": "./src/styles/index.scss"
+	},
+	"files": [
+		"src"
+	],
+	"license": "MIT",
+	"name": "@lunagic/prometheus",
+	"peerDependencies": {
+		"preact": "^10.26.5",
+		"sass": "^1.87.0",
+		"typescript": "^5.8.3"
+	},
+	"scripts": {
+		"fix": "biome check --write --unsafe",
+		"lint": "biome check",
+		"storybook": "storybook dev -p 6006",
+		"test": "echo test",
+		"prepublishOnly": "npm install && npm run lint && git status | grep 'nothing to commit, working tree clean'"
+	},
+	"type": "module",
+	"version": "0.0.9"
+}

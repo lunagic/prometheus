@@ -1,0 +1,15 @@
+.main {
+	display: flex;
+}
+
+.horizontal {
+	flex-direction: row;
+}
+
+.vertical {
+	flex-direction: column;
+}
+
+.gap {
+	gap: 1rem;
+}

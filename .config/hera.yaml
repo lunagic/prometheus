@@ -1,0 +1,6 @@
+services:
+  storybook:
+    command: npm run storybook
+    watch:
+      - .storybook
+    exclude: []

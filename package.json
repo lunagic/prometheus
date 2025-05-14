@@ -30,8 +30,8 @@
 		"lint": "biome check",
 		"storybook": "storybook dev -p 6006",
 		"test": "echo test",
-		"prepublishOnly": "npm install && npm run lint && git status | grep 'nothing to commit, working tree clean'"
+		"prepublishOnly": "npm install && npm run fix && git status | grep 'nothing to commit, working tree clean'"
 	},
 	"type": "module",
-	"version": "0.0.9"
+	"version": "0.0.10"
 }

@@ -1,4 +1,4 @@
-import { Panel } from "../Panel";
+import { Panel } from "../../Layout/Panel";
 import styles from "./styles.module.scss";
 
 export interface ContentProps {

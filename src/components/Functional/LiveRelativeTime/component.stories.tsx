@@ -1,7 +1,7 @@
 import { LiveRelativeTime } from "./index";
 
 const meta = {
-	title: "Prometheus/LiveRelativeTime",
+	title: "Prometheus/Functional/LiveRelativeTime",
 	component: LiveRelativeTime,
 };
 export default meta;

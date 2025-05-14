@@ -1,8 +1,8 @@
 "use client";
 import { useRef } from "preact/hooks";
-import { Box } from "../Box";
+import { Box } from "../../Layout/Box";
 import { Button } from "../Button";
-import { Panel } from "../Panel";
+import { Panel } from "../../Layout/Panel";
 
 export interface FormProps {
 	children?: preact.ComponentChildren;

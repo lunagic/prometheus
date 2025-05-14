@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 import { Table, type TableSort, TableSortDirection } from "./index";
 
 const meta = {
-	title: "Prometheus/Table",
+	title: "Prometheus/Functional/Table",
 	component: Table,
 };
 export default meta;

@@ -1,7 +1,7 @@
 import { Panel } from "./index";
 
 const meta = {
-	title: "Prometheus/Panel",
+	title: "Prometheus/Layout/Panel",
 	component: Panel,
 };
 export default meta;

@@ -1,14 +1,12 @@
 import { Content } from ".";
+import { ContentDemoFull } from "../../demo_data";
 
 const meta = {
-	title: "Prometheus/Content",
+	title: "Prometheus/Functional/Content",
 	component: Content,
 };
 export default meta;
 
 export const Primary = () => (
-	<Content>
-		<h1>Header</h1>
-		<p>Paragraph</p>
-	</Content>
+	<ContentDemoFull />
 );

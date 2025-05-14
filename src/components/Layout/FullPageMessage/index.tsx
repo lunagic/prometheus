@@ -1,3 +1,4 @@
+import { Panel } from "../Panel";
 import styles from "./styles.module.scss";
 
 export interface FullPageMessageProps {
@@ -5,5 +6,9 @@ export interface FullPageMessageProps {
 }
 
 export const FullPageMessage = (props: FullPageMessageProps) => {
-	return <div className={styles.main}>{props.children}</div>;
+	return <div className={styles.main}>
+		<Panel direction="vertical" className={styles.content}>
+			{props.children}
+		</Panel>
+	</div>;
 };

@@ -1,14 +1,14 @@
-export { Button } from "./components/Button";
-export { Box } from "./components/Box";
-export { FullPageMessage } from "./components/FullPageMessage";
-export { Content } from "./components/Content";
-export { Form } from "./components/Form";
-export { Panel } from "./components/Panel";
-export { LiveRelativeTime } from "./components/LiveRelativeTime";
-export { FormInput } from "./components/FormInput";
+export { Button } from "./components/Functional/Button";
+export { Box } from "./components/Layout/Box";
+export { FullPageMessage } from "./components/Layout/FullPageMessage";
+export { Content } from "./components/Functional/Content";
+export { Form } from "./components/Functional/Form";
+export { Panel } from "./components/Layout/Panel";
+export { LiveRelativeTime } from "./components/Functional/LiveRelativeTime";
+export { FormInput } from "./components/Functional/FormInput";
 export {
 	Table,
 	type TableColumn,
 	type TableSort,
 	TableSortDirection,
-} from "./components/Table";
+} from "./components/Functional/Table";

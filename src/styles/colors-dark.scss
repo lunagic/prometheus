@@ -1,0 +1,25 @@
+@mixin colors {
+    --reset-css-foreground-primary: #d7d7d7;
+    --reset-css-foreground-secondary: #868686;
+
+    --reset-css-background-primary: #161616;
+    --reset-css-background-secondary: #000000;
+    --reset-css-background-tertiary: #323232;
+    --reset-css-background-layered: rgba(255, 255, 255, .05);
+
+    --reset-css-accent-primary: #00bfff;
+    --reset-css-accent-secondary: #00bfff;
+    --reset-css-accent-text: #000000;
+
+    --reset-css-success-primary: #26c940;
+    --reset-css-success-secondary: #38d951;
+    --reset-css-success-text: #000000;
+
+    --reset-css-warning-primary: #febb2e;
+    --reset-css-warning-secondary: #fecc61;
+    --reset-css-warning-text: #000000;
+
+    --reset-css-danger-primary: #fe5f57;
+    --reset-css-danger-secondary: #fe6f68;
+    --reset-css-danger-text: #000000;
+}

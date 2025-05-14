@@ -1,0 +1,19 @@
+@use "colors-dark";
+@use "colors-light";
+
+// Default to light mode
+:root {
+    @include colors-light.colors;
+}
+
+// Use dark mode is light mode has been disabled by user preference
+:root.disable-light-mode {
+    @include colors-dark.colors;
+}
+
+// Use dark mode if it is the system preference and dark mode has not been disabled by user preference
+@media (prefers-color-scheme: dark) {
+    :root:not(.disable-dark-mode) {
+        @include colors-dark.colors;
+    }
+}

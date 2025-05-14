@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 export interface PanelProps {
 	children?: preact.ComponentChild;
 	className: string;
+	centered: boolean;
 	direction: "horizontal" | "vertical";
 	gap: boolean;
 }
@@ -19,6 +20,11 @@ export const Panel = (props: PanelProps) => {
 		className += ` ${styles.vertical}`;
 	}
 
+	if (props.centered) {
+		className += ` ${styles.centered}`;
+
+	}
+
 	if (props.gap) {
 		className += ` ${styles.gap}`;
 	}
@@ -28,6 +34,7 @@ export const Panel = (props: PanelProps) => {
 
 Panel.defaultProps = {
 	className: "",
+	centered: false,
 	direction: "horizontal",
 	gap: true,
 } satisfies PanelProps;

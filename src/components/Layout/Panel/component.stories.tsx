@@ -1,3 +1,4 @@
+import { Button } from "../../Functional/Button";
 import { Panel } from "./index";
 
 const meta = {
@@ -31,5 +32,12 @@ export const HorizontalNoGap = () => (
 export const VerticalNoGap = () => (
 	<Panel direction="vertical" gap={false}>
 		{testData}
+	</Panel>
+);
+
+export const Centered = () => (
+	<Panel direction="horizontal" centered={true}>
+		{testData}
+		<Button onClick={() => { }}>Test</Button>
 	</Panel>
 );

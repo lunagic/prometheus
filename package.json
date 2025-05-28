@@ -33,5 +33,5 @@
 		"prepublishOnly": "npm install && npm run fix && git status | grep 'nothing to commit, working tree clean'"
 	},
 	"type": "module",
-	"version": "0.0.16"
+	"version": "0.0.17"
 }

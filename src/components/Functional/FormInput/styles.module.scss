@@ -1,5 +1,7 @@
 .main {
     input {
+        background-color: var(--reset-css-background-primary);
+        border: 1px solid var(--reset-css-background-tertiary);
         padding: .5rem;
         margin-top: .25rem;
         width: 100%;

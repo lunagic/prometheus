@@ -72,10 +72,10 @@ export namespace Theme {
     export function Toggle(): void {
         switch (Current()) {
             case Options.Dark:
-                ApplyDark()
+                ApplyLight()
                 break;
             case Options.Light:
-                ApplyLight()
+                ApplyDark()
                 break;
             default:
                 Reset()

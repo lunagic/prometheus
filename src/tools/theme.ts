@@ -15,15 +15,22 @@ export namespace Theme {
             return Options.System
         }
 
+        // Look for Light Mode override
         if (root.classList.contains(CLASS_NAME_DISABLE_DARK_MODE)) {
             return Options.Light
         }
 
+        // Look for Dark Mode override
         if (root.classList.contains(CLASS_NAME_DISABLE_LIGHT_MODE)) {
             return Options.Dark
         }
 
-        return Options.System
+        // Look for Dark Mode from system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return Options.Dark
+        }
+
+        return Options.Light
     }
 
     export function Apply(theme: Options): void {

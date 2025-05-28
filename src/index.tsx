@@ -6,6 +6,7 @@ export { Form } from "./components/Functional/Form";
 export { Panel } from "./components/Layout/Panel";
 export { LiveRelativeTime } from "./components/Functional/LiveRelativeTime";
 export { FormInput } from "./components/Functional/FormInput";
+export { Theme } from "./tools/theme"
 export {
 	Table,
 	type TableColumn,

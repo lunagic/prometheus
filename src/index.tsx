@@ -1,5 +1,6 @@
 export { Button } from "./components/Functional/Button";
 export { Box } from "./components/Layout/Box";
+export { Container } from "./components/Layout/Container";
 export { FullPageMessage } from "./components/Layout/FullPageMessage";
 export { Content } from "./components/Functional/Content";
 export { Form } from "./components/Functional/Form";

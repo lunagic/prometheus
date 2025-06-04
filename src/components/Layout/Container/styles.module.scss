@@ -1,0 +1,13 @@
+.main {
+    container: prometheus_container / inline-size;
+}
+
+.secondary {
+    text-align: center;
+}
+
+@container prometheus_container (width > 32rem) {
+    .secondary {
+        text-align: left;
+    }
+}

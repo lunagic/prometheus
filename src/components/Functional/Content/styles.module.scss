@@ -37,4 +37,20 @@
         font-weight: bold;
         cursor: pointer;
     }
+
+    pre {
+        font-family: monospace;
+        padding: 1em;
+        border-radius: .5rem;
+        background-color: var(--reset-css-background-secondary);
+        border: 1px solid var(--reset-css-background-tertiary);
+    }
+
+    ul {
+        margin-left: 2em;
+
+        li {
+            margin: .25em 0;
+        }
+    }
 }

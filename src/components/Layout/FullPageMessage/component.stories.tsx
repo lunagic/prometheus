@@ -1,6 +1,6 @@
 import { FullPageMessage } from ".";
 import { Box } from "../Box";
-import { ContentDemoSmall } from "../../demo_data";
+import { ContentDemoFull, ContentDemoSmall } from "../../demo_data";
 
 const meta = {
 	title: "Prometheus/Layout/FullPageMessage",
@@ -11,24 +11,17 @@ const meta = {
 };
 export default meta;
 
-export const Primary = () => {
-	return <FullPageMessage>
-		<ContentDemoSmall />
-	</FullPageMessage>;
-}
-
 export const Small = () => {
 	return <FullPageMessage>
-		<h1>Header</h1>
-		<p>Paragraph</p>
+		<ContentDemoSmall />
 	</FullPageMessage>;
 }
 
 export const Scrollable = () => {
 	return <FullPageMessage>
 		<Box>
-			<ContentDemoSmall />
+			<ContentDemoFull />
 		</Box>
-		<ContentDemoSmall />
+		<ContentDemoFull />
 	</FullPageMessage>;
 }

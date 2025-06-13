@@ -1,4 +1,3 @@
-import { Panel } from "../../Layout/Panel";
 import styles from "./styles.module.scss";
 
 export interface ContentProps {
@@ -7,8 +6,8 @@ export interface ContentProps {
 
 export const Content = (props: ContentProps) => {
 	return (
-		<Panel direction="vertical" className={styles.main}>
+		<div className={styles.main}>
 			{props.children}
-		</Panel>
+		</div>
 	);
 };

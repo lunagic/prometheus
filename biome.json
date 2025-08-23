@@ -12,7 +12,8 @@
 		"enabled": true
 	},
 	"files": {
-		"ignoreUnknown": true
+		"ignoreUnknown": true,
+		"includes": ["**", "!.vscode/*"]
 	},
 	"formatter": {
 		"enabled": true,

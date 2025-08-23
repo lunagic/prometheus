@@ -3,14 +3,14 @@ import "../src/styles/index.scss"
 
 const preview: Preview = {
 	parameters: {
-		layout: "centered",
 		backgrounds: {
+			default: "secondary",
 			values: [
 				{ name: "secondary", value: "var(--reset-css-background-secondary)" },
 				{ name: "primary", value: "var(--reset-css-background-primary)" },
 			],
-			default: "secondary",
 		},
+		layout: "centered",
 	},
 }
 

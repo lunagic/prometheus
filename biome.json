@@ -1,50 +1,38 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on",
+				"useSortedAttributes": "on",
+				"useSortedKeys": "on",
+				"useSortedProperties": "on"
+			}
+		},
+		"enabled": true
+	},
+	"files": {
+		"ignoreUnknown": true
+	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab"
 	},
-	"organizeImports": {
-		"enabled": true
-	},
-	"files": {
-		"include": ["src/frontend/", "pkg/frontend/", ".storybook"],
-		"ignore": ["src/frontend/go.ts"]
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"semicolons": "asNeeded"
+		}
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"all": true,
-			"a11y": {
-				"useKeyWithClickEvents": "off",
-				"useValidAnchor": "off"
-			},
-			"suspicious": {
-				"noReactSpecificProps": "off",
-				"noEmptyBlockStatements": "off",
-				"noArrayIndexKey": "off",
-				"noExplicitAny": "off",
-				"noConsole": "off"
-			},
-			"correctness": {
-				"useImportExtensions": "off",
-				"noUndeclaredVariables": "off",
-				"noUndeclaredDependencies": "off"
-			},
-			"style": {
-				"noNamespace": "off",
-				"noDefaultExport": "off",
-				"useNamingConvention": "off"
-			},
-			"performance": {
-				"noBarrelFile": "off"
-			}
+			"recommended": true
 		}
 	},
-	"javascript": {
-		"formatter": {
-			"semicolons": "asNeeded",
-			"quoteStyle": "double"
-		}
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true
 	}
 }

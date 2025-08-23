@@ -4,11 +4,7 @@
 		"esModuleInterop": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "preact",
-		"lib": [
-			"ESNext",
-			"DOM",
-			"DOM.Iterable"
-		],
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
 		"module": "ESNext",
 		"moduleDetection": "force",
 		"moduleResolution": "bundler",
@@ -17,10 +13,6 @@
 		"strict": true,
 		"target": "ESNext"
 	},
-	"exclude": [
-		"*.stories.tsx"
-	],
-	"include": [
-		"src"
-	]
+	"exclude": ["*.stories.tsx"],
+	"include": ["src"]
 }

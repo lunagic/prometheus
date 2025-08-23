@@ -1,7 +1,7 @@
 {
 	"description": "UI Library",
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "^2.2.0",
 		"@chromatic-com/storybook": "^3.2.6",
 		"@storybook/addon-essentials": "^8.6.12",
 		"@storybook/blocks": "^8.6.12",
@@ -28,9 +28,9 @@
 	"scripts": {
 		"fix": "biome check --write --unsafe",
 		"lint": "biome check",
+		"prepublishOnly": "npm install && npm run fix && git status | grep 'nothing to commit, working tree clean'",
 		"storybook": "storybook dev -p 6006",
-		"test": "echo test",
-		"prepublishOnly": "npm install && npm run fix && git status | grep 'nothing to commit, working tree clean'"
+		"test": "echo test"
 	},
 	"type": "module",
 	"version": "0.0.21"

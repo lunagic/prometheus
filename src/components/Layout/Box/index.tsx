@@ -1,15 +1,15 @@
-import styles from "./styles.module.scss";
+import styles from "./styles.module.scss"
 
 export interface BoxProps {
-	children: preact.ComponentChild;
-	className?: string;
+	children: preact.ComponentChild
+	className?: string
 }
 
 export const Box = (props: BoxProps) => {
-	let className = styles.main;
+	let className = styles.main
 	if (props.className) {
-		className += ` ${props.className}`;
+		className += ` ${props.className}`
 	}
 
-	return <div className={className}>{props.children}</div>;
-};
+	return <div className={className}>{props.children}</div>
+}

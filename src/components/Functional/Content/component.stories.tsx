@@ -1,12 +1,10 @@
-import { Content } from ".";
-import { ContentDemoFull } from "../../demo_data";
+import { ContentDemoFull } from "../../demo_data"
+import { Content } from "."
 
 const meta = {
-	title: "Prometheus/Functional/Content",
 	component: Content,
-};
-export default meta;
+	title: "Prometheus/Functional/Content",
+}
+export default meta
 
-export const Primary = () => (
-	<ContentDemoFull />
-);
+export const Primary = () => <ContentDemoFull />

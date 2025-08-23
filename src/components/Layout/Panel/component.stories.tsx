@@ -1,11 +1,11 @@
-import { Button } from "../../Functional/Button";
-import { Panel } from "./index";
+import { Button } from "../../Functional/Button"
+import { Panel } from "./index"
 
 const meta = {
-	title: "Prometheus/Layout/Panel",
 	component: Panel,
-};
-export default meta;
+	title: "Prometheus/Layout/Panel",
+}
+export default meta
 
 const testData = (
 	<>
@@ -13,31 +13,29 @@ const testData = (
 		<span>Word Two</span>
 		<span>Word Three</span>
 	</>
-);
+)
 
-export const Default = () => <Panel>{testData}</Panel>;
+export const Default = () => <Panel>{testData}</Panel>
 
-export const Horizontal = () => (
-	<Panel direction="horizontal">{testData}</Panel>
-);
+export const Horizontal = () => <Panel direction="horizontal">{testData}</Panel>
 
-export const Vertical = () => <Panel direction="vertical">{testData}</Panel>;
+export const Vertical = () => <Panel direction="vertical">{testData}</Panel>
 
 export const HorizontalNoGap = () => (
 	<Panel direction="horizontal" gap={false}>
 		{testData}
 	</Panel>
-);
+)
 
 export const VerticalNoGap = () => (
 	<Panel direction="vertical" gap={false}>
 		{testData}
 	</Panel>
-);
+)
 
 export const Centered = () => (
-	<Panel direction="horizontal" centered={true}>
+	<Panel centered={true} direction="horizontal">
 		{testData}
-		<Button onClick={() => { }}>Test</Button>
+		<Button onClick={() => {}}>Test</Button>
 	</Panel>
-);
+)

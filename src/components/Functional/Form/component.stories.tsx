@@ -1,22 +1,22 @@
-import { FormInput } from "../FormInput";
-import { Form } from "./index";
+import { FormInput } from "../FormInput"
+import { Form } from "./index"
 
 const meta = {
-	title: "Prometheus/Functional/Form",
 	component: Form,
-};
-export default meta;
+	title: "Prometheus/Functional/Form",
+}
+export default meta
 
 export const Primary = () => (
-	<Form onSubmit={() => { }} submitText="######">
-		<FormInput type="text" value="######" setValue={() => { }}>
+	<Form onSubmit={() => {}} submitText="######">
+		<FormInput setValue={() => {}} type="text" value="######">
 			########
 		</FormInput>
-		<FormInput type="text" value="#########" setValue={() => { }}>
+		<FormInput setValue={() => {}} type="text" value="#########">
 			####
 		</FormInput>
-		<FormInput type="password" value="#########" setValue={() => { }}>
+		<FormInput setValue={() => {}} type="password" value="#########">
 			########
 		</FormInput>
 	</Form>
-);
+)

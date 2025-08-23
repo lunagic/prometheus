@@ -1,17 +1,19 @@
-import { Button } from "../../Functional/Button";
-import { Container } from "./index";
+import { Button } from "../../Functional/Button"
+import { Container } from "./index"
 
 const meta = {
-    title: "Prometheus/Layout/Container",
-    component: Container,
-    parameters: {
-        layout: "fullscreen",
-    },
-};
-export default meta;
+	component: Container,
+	parameters: {
+		layout: "fullscreen",
+	},
+	title: "Prometheus/Layout/Container",
+}
+export default meta
 
 export const Primary = () => {
-    return <Container>
-        <Button onClick={() => { }}>Test</Button>
-    </Container>;
+	return (
+		<Container>
+			<Button onClick={() => {}}>Test</Button>
+		</Container>
+	)
 }

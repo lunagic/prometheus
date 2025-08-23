@@ -1,13 +1,9 @@
-import styles from "./styles.module.scss";
+import styles from "./styles.module.scss"
 
 export interface ContentProps {
-	children: preact.ComponentChild;
+	children: preact.ComponentChild
 }
 
 export const Content = (props: ContentProps) => {
-	return (
-		<div className={styles.main}>
-			{props.children}
-		</div>
-	);
-};
+	return <div className={styles.main}>{props.children}</div>
+}

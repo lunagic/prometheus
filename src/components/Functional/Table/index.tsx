@@ -1,76 +1,76 @@
-import styles from "./styles.module.scss";
+import styles from "./styles.module.scss"
 
 export type TableProps<T> = {
-	data: T[];
-	sort: TableSort;
-	setSort: SetTableSort;
-	columns: TableColumn<T>[];
-	className?: string;
-};
+	data: T[]
+	sort: TableSort
+	setSort: SetTableSort
+	columns: TableColumn<T>[]
+	className?: string
+}
 
 export type TableColumn<T> = {
-	name: string | React.ReactNode;
-	display: (row: T) => React.ReactNode;
-	sortFunction?: ColumnSortFunction<T>;
-};
+	name: string | React.ReactNode
+	display: (row: T) => React.ReactNode
+	sortFunction?: ColumnSortFunction<T>
+}
 
 export type TableSort = {
-	columnIndex: number;
-	direction: TableSortDirection;
-};
+	columnIndex: number
+	direction: TableSortDirection
+}
 
 export enum TableSortDirection {
 	ASC = "asc",
 	DESC = "desc",
 }
 
-export type SetTableSort = (newSort: TableSort) => void;
-export type ColumnSortFunction<T> = (a: T, b: T) => number;
+export type SetTableSort = (newSort: TableSort) => void
+export type ColumnSortFunction<T> = (a: T, b: T) => number
 
 export function Table<T>(props: TableProps<T>) {
 	const handleSortingChange = (columnIndex: number) => {
 		// Do nothing if column is not sortable
 		if (!props.columns[columnIndex].sortFunction) {
-			return;
+			return
 		}
 
 		const newValue = {
 			columnIndex: columnIndex,
 			direction: TableSortDirection.DESC,
-		} as TableSort;
+		} as TableSort
 		if (props.sort.columnIndex === columnIndex) {
 			// Flip the sort direction if it's not the first time we are clicking this column
 			newValue.direction =
 				props.sort.direction === TableSortDirection.ASC
 					? TableSortDirection.DESC
-					: TableSortDirection.ASC;
+					: TableSortDirection.ASC
 		}
 
-		props.setSort(newValue);
-	};
+		props.setSort(newValue)
+	}
 
 	const sortTableData = (tableData: T[]): T[] => {
 		// Skip if no column is selected
 		if (props.sort.columnIndex === undefined || props.sort.columnIndex < 0) {
-			return tableData;
+			return tableData
 		}
 
 		// Sort using the sort function
 		let sorted = [...tableData].sort(
 			props.columns[props.sort.columnIndex].sortFunction,
-		);
+		)
 
 		// Flip the sort if it's asc
 		if (props.sort.direction === TableSortDirection.ASC) {
-			sorted = sorted.reverse();
+			sorted = sorted.reverse()
 		}
 
-		return sorted;
-	};
+		return sorted
+	}
 
-	const tableData = sortTableData(props.data);
+	const tableData = sortTableData(props.data)
 
-	let message = <></>;
+	let message = <></>
 	if (tableData.length <= 0) {
 		message = (
 			<tr>
@@ -78,7 +78,7 @@ export function Table<T>(props: TableProps<T>) {
 					No Results Selected
 				</td>
 			</tr>
-		);
+		)
 	}
 
 	return (
@@ -89,12 +89,12 @@ export function Table<T>(props: TableProps<T>) {
 					<thead>
 						<tr>
 							{props.columns.map((column, columnIndex) => {
-								const key = columnIndex;
+								const key = columnIndex
 								return (
 									<th
+										className={column.sortFunction ? styles.sortable : ""}
 										key={key}
 										onClick={() => handleSortingChange(columnIndex)}
-										className={column.sortFunction ? styles.sortable : ""}
 									>
 										{columnIndex === props.sort.columnIndex && (
 											<span className={styles.sortIndicator}>
@@ -105,26 +105,26 @@ export function Table<T>(props: TableProps<T>) {
 										)}
 										{column.name}
 									</th>
-								);
+								)
 							})}
 						</tr>
 					</thead>
 					<tbody>
 						{tableData.map((row, rowIndex) => {
-							const key = rowIndex;
+							const key = rowIndex
 							return (
 								<tr key={key}>
 									{props.columns.map((column, columnIndex) => {
-										const key = columnIndex;
-										return <td key={key}>{column.display(row)}</td>;
+										const key = columnIndex
+										return <td key={key}>{column.display(row)}</td>
 									})}
 								</tr>
-							);
+							)
 						})}
 						{message}
 					</tbody>
 				</table>
 			</div>
 		</figure>
-	);
+	)
 }

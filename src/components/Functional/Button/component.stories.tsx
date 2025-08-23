@@ -1,9 +1,9 @@
-import { Button } from ".";
+import { Button } from "."
 
 const meta = {
-	title: "Prometheus/Functional/Button",
 	component: Button,
-};
-export default meta;
+	title: "Prometheus/Functional/Button",
+}
+export default meta
 
-export const Primary = () => <Button onClick={() => { }}>Hello</Button>;
+export const Primary = () => <Button onClick={() => {}}>Hello</Button>
